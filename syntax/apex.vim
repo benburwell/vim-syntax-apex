@@ -52,9 +52,10 @@ syn match   apexCommentStar	 contained "^\s*\*[^/]"me=e-1
 syn match   apexCommentStar	 contained "^\s*\*$"
 syn match   apexLineComment	 "//.*" contains=apexTodo
 
-syn region apexSoqlStatement start="\[" end="\]" contains=apexSoqlKeyword,apexSoqlIdentifier
-syn keyword apexSoqlKeyword contained SELECT TYPEOF END FROM WHERE WITH ROLLUP CUBE HAVING ASC DESC LIMIT OFFSET
+syn region apexSoqlStatement start="\[" end="\]" contains=apexSoqlKeyword,apexSoqlIdentifier,apexSoqlConstant
+syn keyword apexSoqlKeyword contained SELECT TYPEOF END FROM WHERE WITH ROLLUP CUBE HAVING ASC DESC LIMIT OFFSET AND OR NOT
 syn match apexSoqlKeyword contained "USING SCOPE" "DATA CATEGORY" "GROUP BY" "ORDER BY" "NULLS FIRST" "NULLS LAST" "FOR VIEW" "FOR REFERENCE" "UPDATE TRACKING" "UPDATE VIEWSTAT"
+syn keyword apexSoqlConstant contained TRUE FALSE NULL TODAY
 syn match apexSoqlIdentifier contained "\:\S*"
 
 
@@ -130,6 +131,7 @@ if version >= 508 || !exists("did_apex_syn_inits")
 
   ApexHiLink apexSoqlKeyword Keyword
   ApexHiLink apexSoqlIdentifier Identifier
+  ApexHiLink apexSoqlConstant Constant
 endif
 
 delcommand ApexHiLink
