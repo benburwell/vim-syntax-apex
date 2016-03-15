@@ -56,7 +56,7 @@ syn region apexSoqlStatement start="\[" end="\]" contains=apexSoqlKeyword,apexSo
 syn keyword apexSoqlKeyword contained SELECT TYPEOF END FROM WHERE WITH ROLLUP CUBE HAVING ASC DESC LIMIT OFFSET AND OR NOT
 syn match apexSoqlKeyword contained "USING SCOPE" "DATA CATEGORY" "GROUP BY" "ORDER BY" "NULLS FIRST" "NULLS LAST" "FOR VIEW" "FOR REFERENCE" "UPDATE TRACKING" "UPDATE VIEWSTAT"
 syn keyword apexSoqlConstant contained TRUE FALSE NULL TODAY
-syn match apexSoqlIdentifier contained "\:\S*"
+syn match apexSoqlIdentifier contained "\:[^\s\]]*"
 
 
 " syntax coloring for apexdoc comments (HTML)
