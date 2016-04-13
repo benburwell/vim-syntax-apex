@@ -54,7 +54,16 @@ syn match   apexLineComment	 "//.*" contains=apexTodo
 
 syn region apexSoqlStatement start="\[" end="\]" contains=apexSoqlKeyword,apexSoqlIdentifier,apexSoqlConstant
 syn keyword apexSoqlKeyword contained SELECT TYPEOF END FROM WHERE WITH ROLLUP CUBE HAVING ASC DESC LIMIT OFFSET AND OR NOT
-syn match apexSoqlKeyword contained "USING SCOPE" "DATA CATEGORY" "GROUP BY" "ORDER BY" "NULLS FIRST" "NULLS LAST" "FOR VIEW" "FOR REFERENCE" "UPDATE TRACKING" "UPDATE VIEWSTAT"
+syn match apexSoqlKeyword contained "USING SCOPE"
+syn match apexSoqlKeyword contained "DATA CATEGORY"
+syn match apexSoqlKeyword contained "GROUP BY"
+syn match apexSoqlKeyword contained "ORDER BY"
+syn match apexSoqlKeyword contained "NULLS FIRST"
+syn match apexSoqlKeyword contained "NULLS LAST"
+syn match apexSoqlKeyword contained "FOR VIEW"
+syn match apexSoqlKeyword contained "FOR REFERENCE"
+syn match apexSoqlKeyword contained "UPDATE TRACKING"
+syn match apexSoqlKeyword contained "UPDATE VIEWSTAT"
 syn keyword apexSoqlConstant contained TRUE FALSE NULL TODAY
 syn match apexSoqlIdentifier contained "\:[^\s\]]*"
 
