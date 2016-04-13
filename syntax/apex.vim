@@ -65,7 +65,7 @@ syn match apexSoqlKeyword contained "FOR REFERENCE"
 syn match apexSoqlKeyword contained "UPDATE TRACKING"
 syn match apexSoqlKeyword contained "UPDATE VIEWSTAT"
 syn keyword apexSoqlConstant contained TRUE FALSE NULL TODAY
-syn match apexSoqlIdentifier contained "\:[^\s\]]*"
+syn match apexSoqlIdentifier contained "\:\s*[a-zA-Z\.0-9_]\+"
 
 
 " syntax coloring for apexdoc comments (HTML)
