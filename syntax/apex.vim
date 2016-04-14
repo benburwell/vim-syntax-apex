@@ -53,7 +53,7 @@ syn match   apexCommentStar	 contained "^\s*\*$"
 syn match   apexLineComment	 "//.*" contains=apexTodo
 
 syn region apexSoqlStatement start="\[" end="\]" contains=apexSoqlKeyword,apexSoqlIdentifier,apexSoqlConstant
-syn keyword apexSoqlKeyword contained SELECT TYPEOF END FROM WHERE WITH ROLLUP CUBE HAVING ASC DESC LIMIT OFFSET AND OR NOT
+syn keyword apexSoqlKeyword contained SELECT TYPEOF END FROM WHERE WITH ROLLUP CUBE HAVING ASC DESC LIMIT OFFSET AND OR NOT IN
 syn match apexSoqlKeyword contained "USING SCOPE"
 syn match apexSoqlKeyword contained "DATA CATEGORY"
 syn match apexSoqlKeyword contained "GROUP BY"
